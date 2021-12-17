@@ -1,3 +1,7 @@
+This is a fork of whatever is mentioned below.
+The original repo was a good start, but there were various issues.
+Some of the other forks may be better.
+
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=721
 
 Syntax file for the .NET Microsoft Intermediate Language Assembly. Quite complete -- I hope so, at least.
