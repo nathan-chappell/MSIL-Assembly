@@ -14,6 +14,11 @@ syntax match ilasmNumber "[0-9]\+"
 " 
 syntax match ilasmDirective "\.namespace"
 syntax match ilasmDirective "\.method"
+syntax match ilasmDirective "\.override"
+syntax match ilasmDirective "\.event"
+syntax match ilasmDirective "\.addon"
+syntax match ilasmDirective "\.removeon"
+syntax match ilasmDirective "\.fire"
 syntax match ilasmDirective "\.class"
 syntax match ilasmDirective "\.field"
 syntax match ilasmDirective "\.locals"
@@ -38,7 +43,7 @@ syntax match ilasmDirective "\.maxstack"
 
 " The types
 
-syntax keyword ilasmType int8 uint8 int32 uint32 int64 float32 float64 string void int16 char bool bytearray nullref
+syntax keyword ilasmType int8 uint8 int32 uint32 int64 float32 float64 string void int16 char bool bytearray nullref object
  
 
 " The keywords
@@ -264,7 +269,10 @@ syntax match ilasmKeyword "\<refanytype\>"
 
 " additions:
 
-syntax keyword ilasmDeclaration public private privatescope family assembly famandassem famorassem cil cdecl  stdcall thiscall fastcall managed unmanaged auto ansi extends static valuetype explicit init vararg extern at initonly rtspecialname marchal literal notserialized specialname request demand assert deny permitonly linkcheck inheritcheck reqmin reqopt reqrefuse prejitgrant noncasdemand noncaslinkdemand noncasinheritance fromunmanaged callmostderived unicode value enum interface sealed abstract sequential autochar import serializable beforefieldinit nested instance class 
+syntax keyword ilasmDeclaration public private privatescope family assembly famandassem famorassem cil cdecl  stdcall thiscall fastcall managed unmanaged auto ansi extends static valuetype explicit init vararg extern at initonly rtspecialname marchal literal notserialized specialname request demand assert deny permitonly linkcheck inheritcheck reqmin reqopt reqrefuse prejitgrant noncasdemand noncaslinkdemand noncasinheritance fromunmanaged callmostderived unicode value enum interface sealed abstract sequential autochar import serializable beforefieldinit nested instance class implements
+
+highlight ilasmMscorlib ctermfg=grey
+syntax match ilasmMscorlib "\[mscorlib\]"
 
 " if !exists("did_ilasm_syntax_inits")
    	" let did_ilasm_syntax_inits=1
